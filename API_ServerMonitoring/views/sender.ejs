@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+
+    <script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
+    <script src="http://localhost:3636/socket.io/socket.io.js"></script>
+
+    <script type="text/javascript">
+        var socket = io('http://localhost:3636');
+        $(document).ready( function() {
+            $('#senddata').click(function() {
+                socket.emit('neuroskyData', 'sadfsafasdf' + Math.random() );
+            });
+        });
+    </script>
+
+
+</head>
+<body>
+
+<button id="senddata">send data</button>
+
+</body>
+</html>
